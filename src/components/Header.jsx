@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown, faHouse, faPalette, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown, faHouse, faImages, faPalette, faStar } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -53,6 +53,14 @@ const Header = ({ menuOpened, setMenuOpened }) => {
         >
           <FontAwesomeIcon icon={faStar} />
           <p className={`${!menuOpened ? 'hidden' : ''}`}>Rating</p>
+        </NavLink>
+        <NavLink
+          to='image-slider'
+          className=' w-full items-center h-10 pl-2 lg:pl-6  flex gap-2 text-white rounded-r-full'
+          style={({ isActive }) => isActive ? activeStyles : null}
+        >
+          <FontAwesomeIcon icon={faImages} />
+          <p className={`${!menuOpened ? 'hidden' : ''}`}>Slider</p>
         </NavLink>
       </nav>
     </div>

@@ -1,8 +1,6 @@
 import React from 'react'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStarAndCrescent } from '@fortawesome/free-solid-svg-icons/faStarAndCrescent'
-// import Confetti from 'confetti'
 import ReactConfetti from 'react-confetti'
 
 const StarRating = () => {
@@ -28,7 +26,7 @@ const StarRating = () => {
     <div className='w-full h-full flex flex-col justify-center items-center'>
       {selectedStar === 5 && <ReactConfetti />}
       <h2 className='text-5xl'>STAR RATING</h2>
-      <p>Rate this projects</p>
+      <p>Rate these projects</p>
       <div className='my-5'>
         {starsMap}
       </ div>

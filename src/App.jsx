@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import FAQ from './pages/Accordion/FAQ'
 import Palette from './pages/randomColor/Palette'
 import StarRating from './pages/starRating/StarRating'
+import ImageSlider from './pages/imageSlider/ImageSlider'
 const App = () => {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () => {
           <Route path='accordion' element={<FAQ />} />
           <Route path='palette' element={<Palette />} />
           <Route path='star-rating' element={<StarRating />} />
+          <Route path='image-slider' element={<ImageSlider />} />
         </Route>
       </Routes>
     </BrowserRouter>
