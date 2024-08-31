@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown, faHouse, faImages, faPalette, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown, faHouse, faImages, faPalette, faQrcode, faSearch, faStar, faTree } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -61,6 +61,30 @@ const Header = ({ menuOpened, setMenuOpened }) => {
         >
           <FontAwesomeIcon icon={faImages} />
           <p className={`${!menuOpened ? 'hidden' : ''}`}>Slider</p>
+        </NavLink>
+        <NavLink
+          to='tree-view'
+          className=' w-full items-center h-10 pl-2 lg:pl-6  flex gap-2 text-white rounded-r-full'
+          style={({ isActive }) => isActive ? activeStyles : null}
+        >
+          <FontAwesomeIcon icon={faTree} />
+          <p className={`${!menuOpened ? 'hidden' : ''}`}>Tree View</p>
+        </NavLink>
+        <NavLink
+          to='qr-code'
+          className=' w-full items-center h-10 pl-2 lg:pl-6  flex gap-2 text-white rounded-r-full'
+          style={({ isActive }) => isActive ? activeStyles : null}
+        >
+          <FontAwesomeIcon icon={faQrcode} />
+          <p className={`${!menuOpened ? 'hidden' : ''}`}>QR Code</p>
+        </NavLink>
+        <NavLink
+          to='searchbar'
+          className=' w-full items-center h-10 pl-2 lg:pl-6  flex gap-2 text-white rounded-r-full'
+          style={({ isActive }) => isActive ? activeStyles : null}
+        >
+          <FontAwesomeIcon icon={faSearch} />
+          <p className={`${!menuOpened ? 'hidden' : ''}`}>QR Code</p>
         </NavLink>
       </nav>
     </div>
